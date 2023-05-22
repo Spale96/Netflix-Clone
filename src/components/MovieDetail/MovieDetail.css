@@ -1,0 +1,37 @@
+.movie__container {
+    overflow: hidden;
+    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.movie__container p {
+    text-decoration: none !important;
+    font-weight: 400;
+    line-height: 1.4rem;
+    color: rgb(176, 181, 186);
+}
+
+.details__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin-bottom: 5rem;
+}
+
+.released {
+    padding: 1rem 0.5rem;
+    background-color: green;
+    width: 130px;
+    margin: 0 auto;
+    border-radius: 0.375rem;
+}
+
+.movie__container img {
+    max-height: 350px;
+}
