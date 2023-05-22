@@ -32,7 +32,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
             <h1>{title}</h1>
             <div className='row__posters'>
                 {movies.map((movie, id) => (
-                    <div>
+                    <div key={id}>
                         <p>{truncate(movie.title, 30)}</p>
                         <Link to={`/moviedetail/${id}`} key={movie.id} element={<MovieDetail />}>
                             <img
