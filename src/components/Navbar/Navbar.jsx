@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
 function Navbar() {
@@ -13,7 +13,6 @@ function Navbar() {
         return;
     }, []);
 
-
     return (
         <div className={`nav ${show && 'nav__black'}`}>
             <img className="nav__logo"
@@ -25,7 +24,7 @@ function Navbar() {
                 src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
                 alt="Netflix Avatar" />
         </div>
-    )
-}
+    );
+};
 
 export default Navbar; 

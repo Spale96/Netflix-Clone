@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import movieTrailer from 'movie-trailer';
 import YouTube from 'react-youtube';
 import axios from '../Api/axios';
@@ -10,7 +10,6 @@ const base_url = "https://image.tmdb.org/t/p/original/";
 export default function MainRow({ title, isLargeRow, fetchUrl }) {
     const [movies, setMovies] = useState([]);
     const [trailerUrl, setTrailerUrl] = useState('');
-
 
     const handleClick = (movie) => {
         if (trailerUrl) {
@@ -57,5 +56,5 @@ export default function MainRow({ title, isLargeRow, fetchUrl }) {
             </div>
             {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
         </div>
-    )
-}
+    );
+};

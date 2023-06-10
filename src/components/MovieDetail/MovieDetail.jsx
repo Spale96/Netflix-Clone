@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from '../../Api/axios'
-import './MovieDetail.css'
+import axios from '../../Api/axios';
+import './MovieDetail.css';
 
 
 const base_url = "https://image.tmdb.org/t/p/original/";
@@ -32,7 +32,7 @@ export default function MovieDetail() {
     if (error) {
         return (
             <div className='movie__container'>
-                <span>There was an error fetching the movie data for this movie.<br />Please select new film.</span>
+                <span>There was an error fetching the movie data for this movie.<br />Please select a new film.</span>
             </div>
         )
     };
@@ -53,5 +53,5 @@ export default function MovieDetail() {
                 className='row__poster'
             />
         </div>
-    )
-}
+    );
+};

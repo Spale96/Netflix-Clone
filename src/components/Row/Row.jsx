@@ -11,7 +11,6 @@ const base_url = "https://image.tmdb.org/t/p/original/";
 const Row = ({ title, fetchUrl, isLargeRow }) => {
     const [movies, setMovies] = useState([]);
 
-
     useEffect(() => {
         async function fetchData() {
             const request = await axios.get(fetchUrl);
@@ -34,7 +33,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
                 {movies.map((movie, id) => (
                     <div key={id}>
                         <p>{truncate(movie.title, 30)}</p>
-                        <Link to={`/moviedetail/${id}`} key={movie.id} element={<MovieDetail />}>
+                        <Link to={`/moviedetail/${id}`} target='_blank' rel="noopener noreferrer" key={movie.id} element={<MovieDetail />}>
                             <img
                                 key={movie.id}
                                 src={`${base_url}${isLargeRow ? movie?.poster_path : movie?.backdrop_path}`}
